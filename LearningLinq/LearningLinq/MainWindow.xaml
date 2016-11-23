@@ -6,7 +6,21 @@
         xmlns:local="clr-namespace:LearningLinq"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+    <StackPanel Orientation="Vertical">
+        <ListView Name="lvmPerson">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Name}" Width="100"></TextBlock>
+                        <TextBlock Text="{Binding Sex}" Width="100"></TextBlock>
+                        <TextBlock Text="{Binding Age}" Width="100"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <WrapPanel Orientation="Horizontal">
+            <Button Name="btnGirls" Content="Girls" Click="btnGirlsClick" Margin="5 10"></Button>
+            <Button Name="btn" Content="Yet to be" Margin="5 10"></Button>
+        </WrapPanel>
+    </StackPanel>
 </Window>
