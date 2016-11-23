@@ -24,5 +24,26 @@ namespace LearningLinq
         {
             InitializeComponent();
         }
+
+        private void One()
+        {
+            List<Person> list = new List<Person>()
+            {
+            new Person(){ Name="Olive",Sex="女",Age=22},
+            new Person(){ Name="Moyao",Sex="男",Age=23},
+            new Person(){ Name="Momo",Sex="女",Age=22},
+            new Person(){ Name="Only",Sex="女",Age=20},
+            new Person(){ Name="Love",Sex="女",Age=21},
+            new Person(){ Name="For",Sex="女",Age=22},
+            new Person(){ Name="Remote",Sex="男",Age=23},
+            new Person(){ Name="Snow",Sex="女",Age=23}
+            };
+            //从list集合中选出性别为“女”的人
+            var women = from i in list
+                        where i.Sex == "女"
+                        select i;
+
+
+        }
     }
 }
